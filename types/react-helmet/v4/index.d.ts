@@ -24,7 +24,7 @@ declare namespace ReactHelmet {
         style?: Array<any>;
         title?: string;
         titleTemplate?: string;
-        onChangeClientState?: (newState: any) => void;
+        onChangeClientState?: (newState: any, addedTags: any, removedTags: any) => void;
     }
 
     interface HelmetData {
@@ -32,6 +32,7 @@ declare namespace ReactHelmet {
         htmlAttributes: HelmetDatum;
         link: HelmetDatum;
         meta: HelmetDatum;
+        noscript: HelmetDatum;
         script: HelmetDatum;
         style: HelmetDatum;
         title: HelmetDatum;

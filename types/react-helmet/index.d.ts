@@ -10,7 +10,7 @@ interface HelmetProps {
     encodeSpecialCharacters?: boolean;
     titleTemplate?: string;
     defaultTitle?: string;
-    onChangeClientState?: (nextState: any) => any
+    onChangeClientState?: (nextState: any, addedTags: any, removedTags: any) => any
 }
 
 export class Helmet extends React.Component<HelmetProps, any> {
@@ -30,7 +30,6 @@ export interface HelmetData {
     script: HelmetDatum;
     style: HelmetDatum;
     title: HelmetDatum;
-    titleAttributes: HelmetDatum;
 }
 
 export interface HelmetDatum {
